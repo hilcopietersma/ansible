@@ -1,4 +1,4 @@
-- name: check for packages
+- name: check plan destroy
   hosts: all
   tasks:
   - name: plan
