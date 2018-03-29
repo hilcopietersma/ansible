@@ -1,18 +1,21 @@
-- name: plan
-  terraform:
-    project_path: '/root/terraform/login'
-    plan_file: 'provider'
-    lock: true
-    state: planned
+- name: check for packages
+  hosts: all
+  tasks:
+  - name: plan
+    terraform:
+     project_path: '/root/terraform/login'
+     plan_file: 'provider'
+     lock: true
+     state: planned
 
-- name: apply
-  terraform:
-    project_path: '/root/terraform/login'
-    lock: true
-    state: present
+  - name: apply
+    terraform:
+     project_path: '/root/terraform/login'
+     lock: true
+     state: present
 
-- name: destroy
-  terraform:
-    project_path: '/root/terraform/login'
-    lock: true
-    state: absent
+  - name: destroy
+    terraform:
+     project_path: '/root/terraform/login'
+     lock: true
+     state: absent
