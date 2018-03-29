@@ -4,7 +4,7 @@
   tasks:
    - name: yum_command 
    yum:
-   list=installed
+   list= installed
    register: yum_packages
    - name: Print package search result
    debug:
