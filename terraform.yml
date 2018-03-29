@@ -1,7 +1,7 @@
 - name: plan
   terraform:
     project_path: '/root/terraform/login'
-    plan_file: 'tfplan'
+    plan_file: 'provider'
     lock: true
     state: planned
 
