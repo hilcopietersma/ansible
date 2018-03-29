@@ -13,9 +13,3 @@
      project_path: '/root/terraform/login'
      lock: true
      state: present
-
-  - name: destroy
-    terraform:
-     project_path: '/root/terraform/login'
-     lock: true
-     state: absent
