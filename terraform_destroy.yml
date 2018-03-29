@@ -1,5 +1,7 @@
-- name: check plan destroy
-  hosts: all
+- name: terraform destroy
+  hosts: localhost
+  gather_facts: yes
+  become_user: sudo
   tasks:
   - name: plan
     terraform:
