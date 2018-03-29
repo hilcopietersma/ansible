@@ -1,3 +1,18 @@
-- terraform:
-    project_path: '{{ project_dir }}'
+- name: plan
+  terraform:
+    project_path: '/root/terraform/login'
+    plan_file: 'tfplan'
+    lock: true
+    state: planned
+
+- name: apply
+  terraform:
+    project_path: '/root/terraform/login'
+    lock: true
     state: present
+
+- name: destroy
+  terraform:
+    project_path: '/root/terraform/login'
+    lock: true
+    state: absent
