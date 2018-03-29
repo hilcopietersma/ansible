@@ -1,10 +1,11 @@
 - name: check for packages
-  hosts: localhost
+  hosts: all
   gather_facts: true
   tasks:
-    - name: yum_command 
-    yum:
-    list=installed
-    register: yum_packages
-    - debug:
-    var: yum_packages
+   - name: yum_command 
+      yum:
+      list=installed
+      register: yum_packages
+   - name: Print package search result
+      debug:
+      var: yum_packages
