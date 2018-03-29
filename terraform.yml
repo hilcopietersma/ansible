@@ -1,5 +1,7 @@
-- name: check plan apply
-  hosts: all
+- name: terraform apply
+  hosts: localhost
+  gather_facts: yes
+  become_user: sudo
   tasks:
   - name: plan
     terraform:
